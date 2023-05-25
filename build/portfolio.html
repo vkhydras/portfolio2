@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Kim</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--box iconc-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon">
+
+    <style>
+        body{
+            background-color:rgb(17, 17, 120) ;          
+        }
+       
+        
+        /*home section*/ 
+        .home{
+            font-size: larger;
+            top: -20px;
+            left: 20px;
+            
+        }
+        header{
+            height: 50px;
+            align-content: center;
+            display: flex;   
+            z-index: 2; 
+                  
+        }
+        /* giving the word portifolio a share of the remaining space*/
+        .portfolio{
+            margin-right: auto;
+            font-size: 30px;
+        }
+        /*formating the home section to be a flex box and center the content*/
+        #home{
+            height:530px ;
+            
+            display: flex;
+            align-items: center;
+            bottom: 0%;
+            
+        }
+        /*formating the about me section to be a flex box and center the content*/
+        #about_me{
+            height: 530px;
+            width: 600px;
+            display: flex;
+            
+            justify-content: center;
+            font-size: 20px;
+            flex-direction: column;
+        }
+        /*formating the portfolio section to be a flex box and center the content*/
+        #portfolio{
+            height: 530px;
+            
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            
+        }
+        /*formating the contact section to be a flex box and center the content*/
+        #contact{
+            height: 530px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            justify-content: center;
+            
+        }
+        /*h1 heading in home section*/
+        #hello{
+            font-size: 50px
+        }
+        /*formating all the buttons*/
+        button{
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 30px;
+           
+        }
+        /*Hire me button*/
+        #button1{
+            margin-right: 200px;
+            margin-left: 20px;
+        }
+        /*my picture in home section*/
+        .me{
+            width: 700px;
+            height: 530px;
+            top: 0%;
+            animation-name: fliker;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        /*images under portfolio section*/
+        .projects{
+            height: 250px;
+            width: 300px;
+            margin-top: 50px;
+        }
+        /*contains all the project images*/
+        #projects{
+            display: flex;
+            
+            justify-content: space-between;
+        }
+        /*all inputs in the contact section*/
+        input{
+            border: 1px solid black;
+            border-radius: 10px;
+            left: 50px;
+            color: black;
+        }
+        input:hover{
+            background-color: transparent;
+            color: white;
+        }
+        textarea{
+            border: 1px solid black;
+            border-radius: 30px;
+            left: 50px;
+            color: black;
+        }
+        textarea:hover{
+            background-color: transparent;
+            color: white;
+        }
+      
+        textarea{
+            border: 1px solid black;
+        }
+        /*phone number and subject input*/
+        #phone,#subject{
+            width: 465px;
+        }
+        /*all images are in the class container*/
+        .container{
+            position: relative;
+            z-index: 1;
+        }
+        .container:hover .overlay{
+            height: 250px;
+        }
+        .container:hover .text{
+           top: 50%;
+           left: 25%;
+           display: block;
+           
+        }
+        /*text to display when you hover over an image in the portfolio section*/
+        .text{
+            position: absolute;
+            bottom: 0%;
+            transition: 1s; 
+            color: white;
+            height: 0;
+            display: none;
+            font-weight: bold;
+            
+        }
+         /*an overlay to display when you hover over an image in the portfolio section*/
+        .overlay{
+           position: absolute;
+           bottom:0;
+           width: 300px;
+           height: 0;
+           transition: 1s;
+           background-image: linear-gradient(transparent,blue);
+        }
+        /*all buttons*/
+        button{
+            border: 1px solid white;
+            transition: 1s;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+        /*submit/send button*/
+        #send{
+            width: 150px;
+        }
+        /*reset button*/
+        #clear{
+            width: 170px;
+        }
+        footer{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        /*copyright symbol in the footer*/
+        #copyright{
+            margin-right: 200px;
+        }
+        
+        /*animation effect for the image in home section*/
+        @keyframes fliker{
+           0%{
+            opacity: 1;
+           }
+           50%{
+            opacity: 0.7;
+           }
+           100%{
+            opacity: 1;
+           }
+        }
+
+
+       /*smaller screens*/
+
+        @media screen and (max-width: 640px) {
+            /*home section*/ 
+        .home{
+            max-width: 440px;
+            top: -20px;
+            left: 20px;
+            
+        }
+        #hello{
+            font-size: larger;
+        }
+        header{
+            height: 50px;
+            align-content: center;
+            display: flex;   
+            z-index: 2; 
+                  
+        }
+        .menu{
+            position: relative;
+            display: inline-block;
+        }
+        #nav2{
+            position: absolute;
+            right: 20px;
+            top: 40px;
+            background-color: black;
+            opacity: 0.7;
+            color: white;
+            width: 100px;
+            
+        }
+        .menu:hover #nav2{
+            display: block;
+        }
+        /* giving the word portifolio a share of the remaining space*/
+        .portfolio{
+            margin-right: auto;
+            font-size: 30px;
+        }
+        /*formating the home section to be a flex box and center the content*/
+        #home{
+            
+            bottom: 0%;
+            
+        }
+        /*formating the about me section to be a flex box and center the content*/
+        #about_me{
+            overflow: hidden;
+            height: 700px;
+            max-width: 440px;
+            justify-content: center;
+            font-size: medium;
+            flex-direction: column;
+        }
+        /*formating the portfolio section to be a flex box and center the content*/
+        #portfolio{
+            
+            
+            display: flex;
+            flex-direction: column;
+            height: 950px;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            
+        }
+        /*formating the contact section to be a flex box and center the content*/
+        #contact{
+            height: 830px;
+            
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            justify-content: center;
+            
+        }
+        /*h1 heading in home section*/
+        #hello{
+            font-size: 50px
+        }
+        /*formating all the buttons*/
+        button{
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 30px;
+           
+        }
+        /*Hire me button*/
+        #button1{
+            margin-bottom: 10px;
+            width: 120px;
+        }
+        /*my picture in home section*/
+        .me{
+            width: 140px;
+            height: auto;
+            animation-name: fliker;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        /*images under portfolio section*/
+        .projects{
+            height: 250px;
+            width: 300px;
+            margin-top: 50px;
+        }
+        /*contains all the project images*/
+        #projects{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /*all inputs in the contact section*/
+        input{
+            border: 1px solid black;
+            border-radius: 10px;
+            left: 50px;
+            color: black;
+            width: 200px;
+        }
+        input:hover{
+            background-color: transparent;
+            color: white;
+        }
+        textarea{
+            border: 1px solid black;
+            border-radius: 30px;
+            left: 50px;
+            color: black;
+            max-width: 440px;
+        }
+        textarea:hover{
+            background-color: transparent;
+            color: white;
+        }
+      
+        textarea{
+            border: 1px solid black;
+        }
+        /*phone number and subject input*/
+        #phone,#subject{
+            width: 465px;
+        }
+        /*all images are in the class container*/
+        .container{
+            position: relative;
+            z-index: 1;
+        }
+        .container:hover .overlay{
+            height: 250px;
+        }
+        .container:hover .text{
+           top: 50%;
+           left: 25%;
+           display: block;
+           
+        }
+        /*text to display when you hover over an image in the portfolio section*/
+        .text{
+            position: absolute;
+            bottom: 0%;
+            transition: 1s; 
+            color: white;
+            height: 0;
+            display: none;
+            font-weight: bold;
+            
+        }
+         /*an overlay to display when you hover over an image in the portfolio section*/
+        .overlay{
+           position: absolute;
+           bottom:0;
+           width: 300px;
+           height: 0;
+           transition: 1s;
+           background-image: linear-gradient(transparent,rgba(3, 3, 7, 0.76));
+        }
+        /*all buttons*/
+        button{
+            border: 1px solid white;
+            transition: 1s;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+        /*submit/send button*/
+        #send{
+            width: 150px;
+        }
+        /*reset button*/
+        #clear{
+            width: 170px;
+        }
+        footer{
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        /*copyright symbol in the footer*/
+        #copyright{
+            margin-right: 200px;
+        }
+        
+            
+        }       
+    </style>
+
+</head>
+
+<body class="dark:bg-black dark:text-white">
+
+    <header class="bg-blue-200  items-center sticky top-0 h-3 text-black">    
+        <span class="portfolio">Portfolio.</span>
+        <nav id="nav1" class=" hidden sm:block visible self-end">
+            <a href="#home" class="mr-10" >Home</a>
+            <a href="#about_me" class="mr-10">About me</a>            
+            <a href="#portfolio" class="mr-10">portfolio</a>            
+            <a href="#contact" class="mr-10">contact</a>
+        </nav>
+        <dvi class="menu">
+            <button id=menu class="sm:hidden float-right mr-3 hover:text-blue-500 ">
+                &#9776
+            </button>
+            <nav id="nav2" class=" hidden">
+                <a href="#home" class="mr-10" >Home</a>
+                <a href="#about_me" class="mr-10">About me</a>            
+                <a href="#portfolio" class="mr-10">portfolio</a>            
+                <a href="#contact" class="mr-10">contact</a>
+            </nav>
+        </dvi>
+    </header>
+
+    <article class="text-white">
+        <!--firts section(home)-->
+        <section id="home" class="text-white">
+            <div  class="home">
+                <h1 class="font-bold " id="hello">Hi, I'm Victor Kimaru.</h1>
+                <h2 class=" text-3xl">I am a Web Developer..</h2>
+                <h3> <i>~~Welcome to my portfolio and thank you for visting.</i></Welome></h3>
+                <p>I have been a web Developer for more than an year with a lot of experience<br />
+               <i>~Please use the navigation section to different sections of the webpage or use the scroll bar if you would like to learn more about me.~</i></p>
+               <button id="button1"> <a href="#contact" >Hire me</a></button>     
+               <button id="button2">  <a href="#contact" >contact me</a></button><br />
+
+               <a href="https://www.instagram.com/v.k_hydra/" target="_blank" class="mr-5">
+                <div class='bx bxl-instagram-alt bx-rotate-180 bx-tada' style='color:rgba(165,33,74,0.64)'></div>Instgram
+               </a>
+
+               <a href="https://api.whatsapp.com/send?phone=254735348538&text=hello" target="_blank" class="mr-5" >
+                <div class='bx bxl-whatsapp bx-tada' style='color:rgba(43,134,58,0.64)' ></div>Whatsapp
+               </a>
+
+               <a href="tel:+254735348" class="mr-10">
+                <div class='bx bxs-phone bx-tada' style='color:rgba(25,106,210,0.64)' ></div>Mobile 
+               </a>
+
+               <a href="email:victorkimaru8@gmail.com" class="mr-5">
+                <div class='bx bxs-envelope bx-tada' style='color:#efecec' ></div>Email
+               </a>
+
+               <a href="https://twitter.com/v_k_hydra" target="_blank" class="mr-10">
+                <div class='bx bxl-twitter bx-tada' style='color:rgba(25,106,210,0.64)'></div>twitter
+               </a>
+
+              
+            </div>
+            <img src="./img/1684928468366.png" alt="Me" class="me sm:float-right  ">
+        </section>
+        <!--second section(about me)-->
+        <section id="about_me">
+            <h1><b>About me.</b></h1>
+            <p>My name is Victor Kimaru. Am 18 years old, just finished high school.
+                I was schooling at Kagumo highschool, one of the best schools in Kenya. I manage to score a 
+                mean grade of A- in the final examination (KCSE~Kenya Certificate of Secondary Education~)
+                My dream is becoming a software engineer in one of the best companies and become an aspiration to others.
+                Currently, I only know frontend development. I used those skills to create this webpage.
+            </p>
+            <button>Read more</button>
+        </section>
+        <!--third section(portfolio)-->
+        <section id="portfolio">
+            <h1><b>Latest projects.</b></h1>
+            <p><i>~~hover over the images to acces the links to the projects~~</i></p>
+            <!--containing the images for easier styling-->
+            <div id="projects">
+                <div class="container">
+                    <img src="./img/binary.jpg" alt="" class="projects mr-10 " id="project1">
+                   <div class="overlay "></div> 
+                   <pre class="text">Binary project
+<a href="https://github.com/vkhydras/portfolio1/blob/master/build/projects/binary.py" target="_blank"><u>view file</u></a>
+                   </pre>
+                </div>
+                <div class="container">
+                    <img src="./img/music.palyer.jpg" alt="" class="projects mr-10" id="project2">
+                    <div class="overlay"></div> 
+                    <pre class="text">Music player project
+<a href="https://github.com/vkhydras/portfolio1/blob/master/build/projects/mp3.py " target="_blank"><u>view file</u></a>
+                    </pre>
+                </div>
+                <div class="container">
+                    <img src="./img/numpy.png" alt="" class="projects mr-10" id="project3">
+                    <div class="overlay"></div> 
+                    <pre class="text">Numpy project
+<a href="https://github.com/vkhydras/portfolio1/blob/master/build/projects/numpy.py" target="_blank"><u>view file</u></a>
+                    </pre>
+                </div>
+                <div class="container">
+                    <img src="./img/vowel counter.jpg" alt="" class="projects mr-10" id="project4">
+                    <div class="overlay"></div> 
+                    <pre class="text">Vowel counter 
+project
+<a href="https://github.com/vkhydras/portfolio1/blob/master/build/projects/vowel%20counter.py " target="_blank"><u>download file</u></a>
+                    </pre>
+                </div>
+            </div>
+        </section>
+        <!--fourth section(contact)-->
+        <section id="contact">
+            <h1><b>Contact Me!</b></h1>
+            <form action="........" method="get" target="_blank" class="absolute">
+                <div id="subject" class="flex justify-center">
+                    <input type="text" name="subject" placeholder="Subject" required autocomplete="on" id=""><br />
+                </div>
+                <div class="container2">
+                    <input type="text" name="Full Name" placeholder="Full Name" required autocomplete="on">
+                    <input type="email" name="email" placeholder="Email Address" required   autocomplete="on"><br />
+                </div>
+                <div id="phone" class="flex justify-center">
+                    <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="on"  ><br />
+            </div>
+                <textarea name="message" placeholder="Type your message here" id="" cols="50" rows="10"></textarea>
+                <div class="container3">
+                    <button type="submit" name="submit"  class="text-white" id="send">Send</button>
+                    <button type="reset" name="reset" id="clear" >clear form</button>
+                </div>
+            </form>
+        </section>    
+    </article>
+    <footer  >
+        <span id="copyright">&copy;Created by Victor</span>
+        <nav id="nav2" class=" hidden sm:block visible self-end float-left ml-10">
+            <a href="#home" class="mr-10" >Home</a>
+            <a href="#about_me" class="mr-10">About me</a>            
+            <a href="#portfolio" class="mr-10">portfolio</a>            
+            <a href="#contact" class="mr-10">contact</a>
+        </nav>
+    </footer>   
+</body>
+</html>
